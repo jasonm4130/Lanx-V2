@@ -1,13 +1,17 @@
 section.hero.jumbotron
     background-color: $primaryDark
     color: $white
-    padding-bottom: 220px
     margin-bottom: 0
+    padding-bottom: 60px
+    @media (min-width: 768px)
+        padding-bottom: 220px
     h1, h2, h3, h4, h5, h6
         color: $primaryLight
         &.lead
-            font-size: 10rem
+            font-size: 4rem
             text-transform: uppercase
+            @media (min-width: 768px)
+                font-size: 10rem
     .btn.btn-cta
          border: 2px solid $primaryLight
          padding: 25px 55px
@@ -15,3 +19,5 @@ section.hero.jumbotron
          text-transform: uppercase
          font-family: 'Lato', sans-serif
          margin-top: 48px
+         &:hover, &:focus
+            background-color: $primaryLight

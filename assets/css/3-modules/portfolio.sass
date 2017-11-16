@@ -9,10 +9,17 @@ section.portfolio
         font-size: 1.25rem
         margin: 0
         padding: 0
+        margin: 0 auto 45px
+        @media (min-width: 768px)
+            margin: 0 auto 120px
     .portfolio-filter
-        margin: 120px auto
+        margin: 45px auto
+        @media (min-width: 768px)
+            margin: 120px auto
         li
-            margin: 0 13px
+            margin: 13px 13px
+            @media (max-width: 424px)
+                    width: 100%
             .nav-link
                 border: 2px solid $primaryLight
                 color: $primaryDark
@@ -20,6 +27,8 @@ section.portfolio
                 font-size: 1.25rem
                 padding: 15px 36px
                 transition: 0.3s all ease-in-out
+                @media (max-width: 424px)
+                    width: 100%
                 &.active
                     background: $primaryLight
                 &:hover, &:focus
@@ -27,17 +36,20 @@ section.portfolio
     .portfolio-grid
         .grid-sizer,
         .grid-item
-            width: 25%
+            width: 100%
             position: relative
             overflow: hidden
-            height: 450px
-            max-height: 900px
-            &.double-width
-                width: 50%
-            &.tripple-width
-                width: 75%
-            &.double-height
-                height: 900px
+            height: 250px
+            @media (min-width: 768px)
+                width: 25%
+                height: 450px
+                max-height: 900px
+                &.double-width
+                    width: 50%
+                &.tripple-width
+                    width: 75%
+                &.double-height
+                    height: 900px
             img
                 min-width: 100%
                 min-height: 100%
@@ -59,21 +71,27 @@ section.portfolio
                 justify-content: center
                 align-items: center
                 .contents
+                    padding: 15px
                     h5
-                        font-size: 2rem
-                        margin-bottom: 40px
+                        @media (min-width: 1000px)
+                            font-size: 2rem
+                            margin-bottom: 40px
                     p
                         color: $white
-                        font-size: 1.25rem
                         font-family: 'Abel', sans-serif
+                        @media (min-width: 1000px)
+                            font-size: 1.25rem
                     .btn.btn-portfolio
                         float: left
                         color: $primaryDark
-                        margin-top: 40px
-                        padding: 12px 36px
                         border: 2px solid $white
                         border-radius: 0
                         font-family: 'Abel', sans-serif
+                        @media (min-width: 768px)
+                            margin-top: 40px
+                            padding: 12px 36px
+                        &:hover, &:focus
+                            background-color: transparentize($white, 0.2)
                     @media (min-width: 1400px)
                         padding: 120px 80px
                         h5

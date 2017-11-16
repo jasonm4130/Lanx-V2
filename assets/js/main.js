@@ -61,3 +61,27 @@ $(window).on("load", function() {
     
     
 });
+
+$(window).on('scroll', function(){
+
+    /**
+    * Animations
+    */
+    if ($('.cta .text-center').is(':visible')){
+        $('.cta .text-center').addClass('fadeIn');
+    };
+
+    if ($('.services .col:nth-child(1)').is(':visible')){
+        $('.services .col:nth-child(1)').addClass('fadeInLeft');
+    };
+
+    if ($('.services .col:nth-child(2)').is(':visible')){
+        $('.services .col:nth-child(2)').addClass('fadeInUp');
+    };
+
+    if ($('.services .col:nth-child(3)').is(':visible')){
+        $('.services .col:nth-child(3)').addClass('fadeInRight');
+    };
+
+
+});
